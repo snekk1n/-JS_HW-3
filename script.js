@@ -1,3 +1,128 @@
+// строка проверить строку на наличие . и после нее на com или ru
+// let string = 'www.google.com'
+// if (string.includes('.')){
+//     if (string.includes('com') || string.includes('ru')){
+//         console.log('есть com или ru')
+//     } else console.log('есть .')
+// } else console.log('нету .')
+// строка проверить длину слова и узнать что длина четная и не больше 8 и не меньше 4
+// let string = 'asdasd'
+// if (string.length % 2 === 0 && string.length < 8 && string.length > 4) {
+//     console.log('да')
+// } else console.log('нет')
+// строка поменять букву каждого четного индекса на E можно решить через map
+// let string = 'zxczxczxc'
+// let result = ''
+// for (let i = 0; i < string.length; i++) {
+//     if (i % 2 === 0) {
+//         result += 'E';
+//     } else {
+//         result += string[i];
+//     }
+// }
+// console.log(result)
+// строка1 cтрока2 проверить что пароли совпадают и не должны включать в себя пробелы только в начале
+// string1 = 'qwerty'
+// string2 = 'qwerty'
+// if (string1 === string2 && !string1.includes(' ') && !string2.includes(' ')){
+//     console.log('пароли совпадают')
+// } else console.log('пароли не совпадают')
+// ['lorem', 'ipsum', 'dolor', 'sit'] => [5,5,5,3]
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit']
+// for (let i = 0; i < arr.length; i++) {
+//     if (i === arr.length - 1) {
+//         arr[i] = 3
+//     } else arr[i] = 5
+// }
+// console.log(arr)
+// ['lorem', 'ipsum', 'dolor'] => [1,2,3]
+// let arr = ['lorem', 'ipsum', 'dolor']
+// let j = 1
+// for (let i = 0; i < arr.length; i++) {
+//     arr[i] = j
+//     j++
+// }
+// console.log(arr)
+// ['lorem', 'ipsum', 'dolor'] => ['Lorem', 'Ipsum', 'Dolor']
+// const arr = ['lorem', 'ipsum', 'dolor']
+// const arrUpperCase = arr.map(a => a[0].toUpperCase() + a.slice(1).toLowerCase())
+// console.log(arrUpperCase)
+// ['lorem', 'ipsum', 'dolor'] => ['LOREM', 'IPSUM', 'DOLOR']
+// let arr = ['lorem', 'ipsum', 'dolor']
+// const arrUpperCase = arr.map(a => a.toUpperCase())
+// console.log(arrUpperCase)
+// ['lorem', 'ipsum', 'dolor', 'sit', 'amet'] => 'lorem-ipsum-dolor-sit-amet'
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet']
+// let result = arr.join('-')
+// console.log(result)
+// ['lorem', 'ipsum', 'dolor', 'sit', 'amet'] => 'lorem/ipsum/dolor/sit/amet'
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet']
+// let result = arr.join('/')
+// console.log(result)
+// ['lorem', 'ipsum', 'dolor', 'sit', 'amet'] => 'lorem ipsum dolor sit amet'
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet']
+// let result = arr.join(' ')
+// console.log(result)
+// ['lorem', 'ipsum', 'dolor', 'sit', 'amet'] => ['ipsum', 'sit']
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet']
+// let result = arr.splice(0,1) + arr.splice(1,1) + arr.splice(2,1)
+// console.log(arr)
+// ['lorem', 'ipsum', 'dolor', 'sit', 'amet'] => ['lorem', 'dolor', 'amet']
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet']
+// let result = arr.splice(1,1) + arr.splice(2,1)
+// console.log(arr)
+// ['lorem', 'ipsum', 'dolor', 'sit', 'amet'] => ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit']
+// let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet']
+// let result = arr.push('consectetur', 'adipiscing', 'elit')
+// console.log(arr)
+// [123,33,444,'22',55,66,77,88,99] => [123,33,444,55,66,77,88,99]
+// let arr = [123,33,444,'22',55,66,77,88,99]
+// for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'string') {
+//         delete arr[i]
+//     }
+// }
+// console.log(arr)
+// [123,33,444,'22',55,66,77,88,99] => [123,33,444,55,66,77,88,99,22]
+// let arr = [123,33,444,'22',55,66,77,88,99]
+// let result
+// for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'string') {
+//         result = arr + ',' + arr[i]
+//     }
+// }
+// console.log(result)
+// ['null', undefined, 0, false, true, ''] => [0, false, true]
+// let arr = ['null', undefined, 0, false, true, '']
+// for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] !== 'boolean' && typeof arr[i] !== 'number') {
+//         delete arr[i]
+//     }
+// }
+// console.log(arr)
+// ['null', undefined, 0, false, true, ''] => [true, 'null']
+// let arr = ['null', undefined, 0, false, true, '']
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== true && arr[i] !== 'null') {
+//         delete arr[i]
+//     }
+// }
+// console.log(arr.reverse())
+// [1123, 'qwe'] => [1123, 'qwe', 1123, 'qwe']
+// let arr = [1123, 'qwe']
+// let result = arr.concat(arr)
+// console.log(result)
+// [null, undefined] => [null, undefined, null, undefined]
+// let arr = [null, undefined]
+// let result = arr.concat(arr)
+// console.log(result)
+// 'lorem ipsum dolor sit amet' => ['lorem dolor', 'amet'] => 'lorem dolor amet'
+// let string = 'lorem ipsum dolor sit amet'
+// let arr = string.split(' ')
+// arr.splice(1,1) + arr.splice(2, 1)
+// console.log(arr)
+// let result = arr.join(' ')
+// console.log(result)
 // Даны два массива: [1, 2, 3] и [4, 5, 6]. Объедините их вместе.
 // const a = [1, 2, 3]
 // const b = [4, 5, 6]
